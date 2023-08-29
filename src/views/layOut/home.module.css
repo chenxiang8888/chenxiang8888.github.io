@@ -1,0 +1,5 @@
+.layout{height: 100vh; background-color: gray;}
+.side{height: 100vh;  background-color: #001529;}
+.header{background-color: #ffffff; height: 64px;}
+.title{color: aliceblue ; text-align: center; margin-top: 20px; font-size: 18px;}
+.content{height: 80vh; overflow: auto;}

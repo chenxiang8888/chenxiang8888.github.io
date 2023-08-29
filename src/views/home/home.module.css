@@ -1,0 +1,15 @@
+.up{color: #ff0000;}
+.num{font-size: 30px; line-height: 38px; font-weight: 400; color: rgba(0,0,0,.85);}
+.col{color:  rgba(0,0,0,.85);}
+.decline{color: #008000;}
+.hr{color: #f0f0f0; opacity: 20%;}
+.icons{position: absolute; top: 15px; right: 15px;}
+.total{margin: 15px;}
+.visuali{margin-top: 10px;}
+.bar_graph{height: 420px; margin-left: -20px;}
+.school{margin-left: 40px;}
+.amount{margin-left: 360px;}
+.ranking{font-weight: 600; margin: 10px 0 20px;} 
+.schoolinfo{margin-top: 10px;}
+.operate{height: 400px; overflow: auto;}
+.show{height: 400px;}

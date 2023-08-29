@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let item = [
+            {
+                path: "/home",
+                meta: { title: "首页", role: ['admin', "teacher", "manager"] }
+            },
+            {
+                path: "/personal",
+                meta: { title: "个人中心", role: ['admin', "teacher", "manager"] }
+            },
+            {
+                path: "/teacher",
+                meta: { title: "个人中心", role: ['admin'] }
+            },
+            {
+                path: "admissions",
+                meta: { title: "招生管理", role: ['admin', "manager"] },
+                children: [
+                    {
+                        path: "admissions/intentional",
+                        meta: { title: "意向学员管理", role: ['admin', "manager"] },
+                    },
+                    {
+                        path: "admissions/solicitation",
+                        meta: { title: "邀约查询", role: ['admin', "manager"] },
+                    },
+                ]
+            },
+            {
+                path: "/student",
+                meta: { title: "学生管理", role: ['admin', "teacher", "manager"] },
+                children: [
+                    {
+                        path: "/student/info",
+                        meta: { title: "学生信息", role: ['admin', "teacher", "manager"] },
+                    },
+                    {
+                        path: "/student/exam",
+                        meta: { title: "考试管理", role: ['admin', "teacher"] },
+                    },
+                ]
+            },
+            {
+                path: "/class",
+                meta: { title: "排课管理", role: ['admin'] }
+            },
+            {
+                path: "/administrative",
+                meta: { title: "个人中心", role: ['admin'] }
+            },
+            {
+                path: "/finance",
+                meta: { title: "财务管理", role: ['admin'] }
+            },
+        ]
+
+        function filterMenus(datas) {
+            return datas.map((items) => {
+                return { label: items.meta.title, }
+            })
+        }
+
+        let strLength = (str) => {
+            return str.length
+        }
+        let findStr = (strValue, fields) => {
+            return strValue.indexOf(fields)
+        }
+        let truncate = (str, num) => str.substring(num)
+        let toUpper = (str) => {
+            let fist = str[0].toUpperCase()
+            return fist + str.substring(1)
+
+        }
+
+        let clear = (str) => {
+            return str.trim()
+        }
+        let splitStr = (str, sym) => {
+            return str.split(sym)
+        }
+        let arrJoin = (arr, sym) => {
+            return arr.join(sym)
+        }
+        let num = 0
+        let arrs = [5, 6, 4, 3, 2, 7, 4, 5, 2, 3, 2, 3, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 44,]
+        for (let i = 0; i < arrs.length - 1; i++) {
+            for (let j = 0; j < arrs.length - 1 - i; j++) {
+                if (arrs[j] < arrs[j + 1]) {
+                    [arrs[j], arrs[j + 1]] = [arrs[j + 1], arrs[j]]
+                    num++
+                }
+            }
+        }
+        // ------------------------------------------------------------------
+
+        function quickSort(arr) {
+            if (arr.length <= 1) {
+                return arr;
+            }
+
+            const pivot = arr[0];
+            const lessThanPivot = [];
+            const greaterThanPivot = [];
+
+            for (let i = 1; i < arr.length; i++) {
+                if (arr[i] <= pivot) {
+                    lessThanPivot.push(arr[i]);
+                } else {
+                    greaterThanPivot.push(arr[i]);
+                }
+                num++
+            }
+
+            return [...quickSort(lessThanPivot), pivot, ...quickSort(greaterThanPivot)];
+        }
+
+        // 示例用法
+        // const arr = [5, 6, 4, 3, 2, 7, 4, 5, 2, 3, 2, 3, 4, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 44,]
+        // const sortedArr = quickSort(arr);
+        // if (navigator.geolocation) {
+        //     navigator.geolocation.getCurrentPosition(
+        //         position => {
+        //             console.log(123)
+        //             const latitude = position.coords.latitude;
+        //             const longitude = position.coords.longitude;
+        //             console.log('Latitude:', latitude);
+        //             console.log('Longitude:', longitude);
+        //         },
+        //         error => {
+        //             console.error('Error:', error.message);
+        //         }
+        //     );
+        // } else {
+        //     console.error('Geolocation is not supported by this browser.');
+        // }
+
+        let towSun=(nums,target)=>{
+            for(let i=0;i<nums.length-1;i++){
+                for(let j=i+1;j<nums.length;j++){
+                    if(nums[i]+nums[j]==target){
+                        let arr=[]
+                        arr.push(i)
+                        arr.push(j)
+                        return arr
+                    }
+                }
+            }
+        }
+        let arr=[3,2,4]
+        console.log(towSun(arr,6))
+
+    </script>
+</body>
+
+</html>

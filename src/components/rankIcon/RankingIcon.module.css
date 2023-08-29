@@ -1,0 +1,5 @@
+.fist,.two,.three{height: 20px; width: 20px; background-image: url("./first.png"); text-align: center; line-height: 12px; color: aliceblue;}
+.two{background-image: url("./two.png") }
+.three{background-image: url("./three.png")}
+.rank{display: inline-block;}
+.other{height: 20px; width: 20px;text-align: center; line-height: 12px; color: black}

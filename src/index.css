@@ -1,0 +1,23 @@
+@import 'antd/dist/antd.css';
+.mt{margin-top: 10px;}
+.ml{margin-left: 10px;}
+.mr{margin-right: 10px;}
+.mb{margin-bottom: 10px;}
+.pt{padding-top: 10px;}
+.pl{padding-left: 10px;}
+.pr{padding-right: 10px;}
+.pb{padding-bottom: 10px;}
+*{margin: 0; padding: 0;}
+.mal{margin: 10px;}
+.mud{margin:16px}
+.fl{float: left;}
+.clearfix::after{display: block; clear: both; content: ''; height: 0;}
+.more{display: none;}
+
+
+* {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE/Edge */
+    user-select: none;
+  }
